@@ -50,6 +50,7 @@ Content-Type :'application/json'
 
 ### График хешрейта
 * get запрос: trustpool.ru/res/saas//observer/hashrate/chart
+
 |Параметр|Тип данных|Обязательный?|Комментарий|
 | -----|----|----|----|
 | access_key | string | yes | Ключ доступа,  trustpool.ru/setting/observer, тут можно получить.|

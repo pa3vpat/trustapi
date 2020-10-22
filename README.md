@@ -11,12 +11,18 @@ Content-Type :'application/json'
 Путь：trustpool.ru/res/saas/
 
 ## Оглавление
-
-
-
+* [Главная страница](#Главная_страница)
+* [График хешрейта](#График_хешрейта)
+* [График доходов](#График_доходов)
+* [Доходы детально](#Доходы_детально)
+* [Выплаты детально](#Выплаты_детально)
+* [Инофрмация о наблюдателе](#Вотчер_инфа)
+* [Информация о группах устройств](#Информация_о_группах_устройств)
+* [Информация о воркерах/майнерах](#Информация_о_воркерах)
+* [График хешрейта на воркере/майнере](#График_устройства)
 -----
 ## Вотчер / Watcher / Наблюдатель
-
+<a name="Главная_страница"></a> 
 ### Главная страница
 * get запрос: trustpool.ru/res/saas/observer/home?
 
@@ -47,7 +53,7 @@ Content-Type :'application/json'
   "message": "ok"
 }
 ```
-
+<a name="График_хешрейта"></a> 
 ### График хешрейта
 * get запрос: trustpool.ru/res/saas/observer/hashrate/chart
 
@@ -75,7 +81,7 @@ Content-Type :'application/json'
   "message": "ok"
 }
 ```
-
+<a name="График_доходов"></a> 
 ### График доходов
 
 * get запрос:  trustpool.ru/res/saas/observer/profit/chart?
@@ -102,7 +108,7 @@ Content-Type :'application/json'
 }
 ```
 
-
+<a name="Доходы_детально"></a> 
 ### Детальная информация о доходах
 
 GET: trustpool.ru/res/saas/observer/profit/detail?
@@ -142,7 +148,7 @@ GET: trustpool.ru/res/saas/observer/profit/detail?
   "message": "ok"
 }
 ```
-
+<a name="Выплаты_детально"></a> 
 ### Детальная информация о выплатах
 
 * get запрос:  trustpool.ru/res/saas/observer/payment/detail?
@@ -181,7 +187,7 @@ GET: trustpool.ru/res/saas/observer/profit/detail?
   "message": "OK"
 }
 ```
-
+<a name="Вотчер_инфа"></a> 
 ### Информация о Вотчере
 
 * get запрос: trustpool.ru/res/saas/observer/info?
@@ -250,7 +256,7 @@ GET: trustpool.ru/res/saas/observer/profit/detail?
   "message": "OK"
 }
 ```
-
+<a name="Информация_о_ворекрах"></a> 
 ### Информация о воркерах
 
 <a name="Информация_о_воркерах"></a> 
@@ -302,7 +308,7 @@ GET: trustpool.ru/res/saas/observer/profit/detail?
   "message": "OK"
 }
 ```
-
+<a name="График_устройства"></a> 
 ### График хешрейта определенного устройства
 
 * get запрос:  trustpool.ru/observer/worker/hashrate/chart?

@@ -208,10 +208,8 @@ GET: trustpool.ru/res/saas/observer/profit/detail?
   "message": "ok"
 }
 ```
-
-### Информация о группах устройств
 <a name="Информация_о_группах_устройств"></a> 
-(trustpool.ru/pool/worker там слева "мои группы")
+### Информация о группах устройств (trustpool.ru/pool/worker там слева "мои группы")
 
 * get запрос: trustpool.ru/observer/worker/group?
 
@@ -254,6 +252,7 @@ GET: trustpool.ru/res/saas/observer/profit/detail?
 
 ### Информация о воркерах
 
+<a name="Информация_о_воркерах"></a> 
 * get запрос: trustpool.ru/observer/worker?
 
 |Параметр|Тип данных|Обязательный?|Комментарий|
@@ -261,8 +260,78 @@ GET: trustpool.ru/res/saas/observer/profit/detail?
 | access_key | string | yes | Ключ доступа,  trustpool.ru/setting/observer, тут можно получить.|
 | coin | string | no | Валюта BTC/ETH  и тд |
 | user_id | int | no | Идентификатор пользователя |
-| group_id | int | yes | Ид группы устройств (узнавать через * [Тут](#Информация_о_группах_устройств)) |
-| worker_name | string | no | 矿工名 |
+| group_id | int | yes | Ид группы устройств (узнавать через * [Этот запрос](#Информация_о_группах_устройств)) |
+| worker_name | string | no | Название воркера |
 | status | string | no | active/unactive |
-| sort_by | string | no | id/name/last_active/recent_hashrate |
+| sort_by | string | no |  id/name/last_active/recent_hashrate |
 | sort_order | string | no | asc/desc |
+
+Пример:trustpool.ru/res/saas/observer/worker?access_key=ACCESS_KEY&coin=BTC&status=active&sort_by=name&group_id=-1
+
+Покажет активные все активные устройства в группе "ВСЕ" и отсортирует по названию
+
+* Выведет：
+
+```
+{
+  "code": 0,
+  "data": {
+    "count": 1,
+    "curr_page": 1,
+    "data": [
+      {
+        "coin": "BTH",
+        "group_id": -1,        
+        "hashrate_10min": "0",  
+        "hashrate_1day": "0",
+        "hashrate_1hour": "0",
+        "id": 470,
+        "last_active": 1550802900,  
+        "name": "1x2",   
+        "recent_hashrate": "0", 
+        "status": "active",
+        "user": "pa3vpat",  
+        "reject_rate": "0"  
+      }
+    ],
+    "has_next": false,
+    "total": 1,
+    "total_page": 1
+  },
+  "message": "OK"
+}
+```
+
+### График хешрейта определенного устройства
+
+* get запрос:  trustpool.ru/observer/worker/hashrate/chart?
+
+|Параметр|Тип данных|Обязательный?|Комментарий|
+| -----|----|----|----|
+| access_key | string | yes | Ключ доступа,  trustpool.ru/setting/observer, тут можно получить.|
+| coin | string | no | Валюта BTC/ETH  и тд |
+| user_id | int | no | Идентификатор пользователя |
+| worker_id | string | no |  Ид воркера получать через: * [Этот запрос](#Информация_о_воркерах) |
+| interval | string | yes | Принимает параметры: min, hour, day|
+| utc | string | no |  Принимает: true или false. True - вернет данные по UTC времени. False - по пекинскому времени|
+
+Пример: trustpool.ru/res/saas/observer/worker/hashrate/chart?access_key=ACCESS_KEY&coin=BTC&interval=day&worker_id=11753971
+
+* Вернет：
+
+```
+{
+    "code": 0,
+    "data": {
+        "hashrate": [
+         123,234,1.131
+        ],
+        "reject_rate": [
+         0,123,3456
+        ],
+        "start": 1595606400000,
+        "unit": "T"
+    },
+    "message": "OK"
+}
+```

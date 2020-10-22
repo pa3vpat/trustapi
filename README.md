@@ -22,9 +22,9 @@ Content-Type :'application/json'
 
 |Параметр|Тип данных|Обязательный?|Комментарий|
 | -----|----|----|----|
-| access_key | string | yes | Ключ доступа,  trustpool.ru/setting/observer, тут можно получить.|
-| user_id | int | no | Идентификатор пользователя |
-| coin | string | yes | Валюта BTC/ETH  и тд |
+| access_key | string | Да | Ключ доступа,  trustpool.ru/setting/observer, тут можно получить.|
+| user_id | int | Нет | Идентификатор пользователя |
+| coin | string | Да | Валюта BTC/ETH  и тд |
 
 Пример: trustpool.ru/res/saas/observer/home?access_key=ВАШ_access_key&coin=BTC
 
@@ -49,15 +49,15 @@ Content-Type :'application/json'
 ```
 
 ### График хешрейта
-* get запрос: trustpool.ru/res/saas//observer/hashrate/chart
+* get запрос: trustpool.ru/res/saas/observer/hashrate/chart
 
 |Параметр|Тип данных|Обязательный?|Комментарий|
 | -----|----|----|----|
-| access_key | string | yes | Ключ доступа,  trustpool.ru/setting/observer, тут можно получить.|
-| user_id | int | no | Идентификатор пользователя |
-| coin | string | yes | Валюта BTC/ETH  и тд |
-| interval | string | yes | Принимает параметры: min, hour, day|
-| utc | string | no |  Принимает: true или false. True - вернет данные по UTC времени. False - по пекинскому времени|
+| access_key | string | Да | Ключ доступа,  trustpool.ru/setting/observer, тут можно получить.|
+| user_id | int | Нет | Идентификатор пользователя |
+| coin | string | Да | Валюта BTC/ETH  и тд |
+| interval | string | Да | Принимает параметры: min, hour, day|
+| utc | string | Нет |  Принимает: true или false. True - вернет данные по UTC времени. False - по пекинскому времени|
 
 Пример: trustpool.ru/res/saas/observer/hashrate/chart?access_key=ACCES_KEY&coin=BTC&interval=day&utc=true
 
@@ -82,10 +82,10 @@ Content-Type :'application/json'
 
 |Параметр|Тип данных|Обязательный?|Комментарий|
 | -----|----|----|----|
-| access_key | string | yes | Ключ доступа,  trustpool.ru/setting/observer, тут можно получить.|
-| user_id | int | no | Идентификатор пользователя |
-| coin | string | yes | Валюта BTC/ETH  и тд |
-| utc | string | no |  Принимает: true или false. True - вернет данные по UTC времени. False - по пекинскому времени|
+| access_key | string | Да | Ключ доступа,  trustpool.ru/setting/observer, тут можно получить.|
+| user_id | int | Нет | Идентификатор пользователя |
+| coin | string | Да | Валюта BTC/ETH  и тд |
+| utc | string | Нет |  Принимает: true или false. True - вернет данные по UTC времени. False - по пекинскому времени|
 
 Пример:trustpool.ru/res/saas/observer/profit/chart?access_key=ACCESS_KEY&coin=BTC&utc=true
 
@@ -109,10 +109,10 @@ GET: trustpool.ru/res/saas/observer/profit/detail?
 
 |Параметр|Тип данных|Обязательный?|Комментарий|
 | -----|----|----|----|
-| access_key | string | yes | Ключ доступа,  trustpool.ru/setting/observer, тут можно получить.|
-| user_id | int | no | Идентификатор пользователя |
-| coin | string | yes | Валюта BTC/ETH  и тд |
-| utc | string | no |  Принимает: true или false. True - вернет данные по UTC времени. False - по пекинскому времени|
+| access_key | string | Да | Ключ доступа,  trustpool.ru/setting/observer, тут можно получить.|
+| user_id | int | Нет | Идентификатор пользователя |
+| coin | string | Да | Валюта BTC/ETH  и тд |
+| utc | string | Нет |  Принимает: true или false. True - вернет данные по UTC времени. False - по пекинскому времени|
 
 * Вернет：
 ```
@@ -149,10 +149,10 @@ GET: trustpool.ru/res/saas/observer/profit/detail?
 
 |Параметр|Тип данных|Обязательный?|Комментарий|
 | -----|----|----|----|
-| access_key | string | yes | Ключ доступа,  trustpool.ru/setting/observer, тут можно получить.|
-| user_id | int | no | Идентификатор пользователя |
-| coin | string | yes | Валюта BTC/ETH  и тд |
-| utc | string | no |  Принимает: true или false. True - вернет данные по UTC времени. False - по пекинскому времени|
+| access_key | string | Да | Ключ доступа,  trustpool.ru/setting/observer, тут можно получить.|
+| user_id | int | Нет | Идентификатор пользователя |
+| coin | string | Да | Валюта BTC/ETH  и тд |
+| utc | string | Нет |  Принимает: true или false. True - вернет данные по UTC времени. False - по пекинскому времени|
 
 * Вернет：
 
@@ -188,9 +188,9 @@ GET: trustpool.ru/res/saas/observer/profit/detail?
 
 |Параметр|Тип данных|Обязательный?|Комментарий|
 | -----|----|----|----|
-| access_key | string | yes | Ключ доступа,  trustpool.ru/setting/observer, тут можно получить.|
-| user_id | int | no | Идентификатор пользователя |
-| coin | string | no | Валюта BTC/ETH  и тд |
+| access_key | string | Да | Ключ доступа,  trustpool.ru/setting/observer, тут можно получить.|
+| user_id | int | Нет | Идентификатор пользователя |
+| coin | string | Нет | Валюта BTC/ETH  и тд |
 
 * Вернет：
 
@@ -216,8 +216,8 @@ GET: trustpool.ru/res/saas/observer/profit/detail?
 
 |Параметр|Тип данных|Обязательный?|Комментарий|
 | -----|----|----|----|
-| access_key | string | yes | Ключ доступа,  trustpool.ru/setting/observer, тут можно получить.|
-| coin | string | no | Валюта BTC/ETH  и тд |
+| access_key | string | Да | Ключ доступа,  trustpool.ru/setting/observer, тут можно получить.|
+| coin | string | Нет | Валюта BTC/ETH  и тд |
 
 * Вернет：
 
@@ -258,14 +258,14 @@ GET: trustpool.ru/res/saas/observer/profit/detail?
 
 |Параметр|Тип данных|Обязательный?|Комментарий|
 | -----|----|----|----|
-| access_key | string | yes | Ключ доступа,  trustpool.ru/setting/observer, тут можно получить.|
-| coin | string | no | Валюта BTC/ETH  и тд |
-| user_id | int | no | Идентификатор пользователя |
-| group_id | int | yes | Ид группы устройств (узнавать через * [Этот запрос](#Информация_о_группах_устройств)) |
-| worker_name | string | no | Название воркера |
-| status | string | no | active/unactive |
-| sort_by | string | no |  id/name/last_active/recent_hashrate |
-| sort_order | string | no | asc/desc |
+| access_key | string | Да | Ключ доступа,  trustpool.ru/setting/observer, тут можно получить.|
+| coin | string | Нет | Валюта BTC/ETH  и тд |
+| user_id | int | Нет | Идентификатор пользователя |
+| group_id | int | Да | Ид группы устройств (узнавать через * [Этот запрос](#Информация_о_группах_устройств)) |
+| worker_name | string | Нет | Название воркера |
+| status | string | Нет | active/unactive |
+| sort_by | string | Нет |  id/name/last_active/recent_hashrate |
+| sort_order | string | Нет | asc/desc |
 
 Пример:trustpool.ru/res/saas/observer/worker?access_key=ACCESS_KEY&coin=BTC&status=active&sort_by=name&group_id=-1
 
@@ -309,12 +309,12 @@ GET: trustpool.ru/res/saas/observer/profit/detail?
 
 |Параметр|Тип данных|Обязательный?|Комментарий|
 | -----|----|----|----|
-| access_key | string | yes | Ключ доступа,  trustpool.ru/setting/observer, тут можно получить.|
-| coin | string | no | Валюта BTC/ETH  и тд |
-| user_id | int | no | Идентификатор пользователя |
-| worker_id | string | no |  Ид воркера получать через: * [Этот запрос](#Информация_о_воркерах) |
-| interval | string | yes | Принимает параметры: min, hour, day|
-| utc | string | no |  Принимает: true или false. True - вернет данные по UTC времени. False - по пекинскому времени|
+| access_key | string | Да | Ключ доступа,  trustpool.ru/setting/observer, тут можно получить.|
+| coin | string | Нет | Валюта BTC/ETH  и тд |
+| user_id | int | Нет | Идентификатор пользователя |
+| worker_id | string | Нет |  Ид воркера получать через: * [Этот запрос](#Информация_о_воркерах) |
+| interval | string | Да | Принимает параметры: min, hour, day|
+| utc | string | Нет |  Принимает: true или false. True - вернет данные по UTC времени. False - по пекинскому времени|
 
 Пример: trustpool.ru/res/saas/observer/worker/hashrate/chart?access_key=ACCESS_KEY&coin=BTC&interval=day&worker_id=11753971
 

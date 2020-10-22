@@ -209,7 +209,7 @@ GET: trustpool.ru/res/saas/observer/profit/detail?
 }
 ```
 
-### Информация о группах устройств 
+### Информация о группах устройств
 
 (trustpool.ru/pool/worker там слева "мои группы")
 
@@ -261,7 +261,7 @@ GET: trustpool.ru/res/saas/observer/profit/detail?
 | access_key | string | yes | Ключ доступа,  trustpool.ru/setting/observer, тут можно получить.|
 | coin | string | no | Валюта BTC/ETH  и тд |
 | user_id | int | no | Идентификатор пользователя |
-| group_id | int | yes | Ид группы устройств (узнавать через * [Тут](#Информацияогруппахустройств)) |
+| group_id | int | yes | Ид группы устройств (узнавать через * [Тут](#Информация о группах устройств)) |
 | worker_name | string | no | 矿工名 |
 | status | string | no | active/unactive |
 | sort_by | string | no | id/name/last_active/recent_hashrate |
